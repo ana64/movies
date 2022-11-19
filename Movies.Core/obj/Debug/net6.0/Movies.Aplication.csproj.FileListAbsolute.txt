@@ -1,0 +1,12 @@
+C:\Users\Ana\source\repos\Movies\git\Movies.Core\bin\Debug\net6.0\Movies.Aplication.deps.json
+C:\Users\Ana\source\repos\Movies\git\Movies.Core\bin\Debug\net6.0\Movies.Aplication.dll
+C:\Users\Ana\source\repos\Movies\git\Movies.Core\bin\Debug\net6.0\Movies.Aplication.pdb
+C:\Users\Ana\source\repos\Movies\git\Movies.Core\obj\Debug\net6.0\Movies.Aplication.csproj.AssemblyReference.cache
+C:\Users\Ana\source\repos\Movies\git\Movies.Core\obj\Debug\net6.0\Movies.Aplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ana\source\repos\Movies\git\Movies.Core\obj\Debug\net6.0\Movies.Aplication.AssemblyInfoInputs.cache
+C:\Users\Ana\source\repos\Movies\git\Movies.Core\obj\Debug\net6.0\Movies.Aplication.AssemblyInfo.cs
+C:\Users\Ana\source\repos\Movies\git\Movies.Core\obj\Debug\net6.0\Movies.Aplication.csproj.CoreCompileInputs.cache
+C:\Users\Ana\source\repos\Movies\git\Movies.Core\obj\Debug\net6.0\Movies.Aplication.dll
+C:\Users\Ana\source\repos\Movies\git\Movies.Core\obj\Debug\net6.0\refint\Movies.Aplication.dll
+C:\Users\Ana\source\repos\Movies\git\Movies.Core\obj\Debug\net6.0\Movies.Aplication.pdb
+C:\Users\Ana\source\repos\Movies\git\Movies.Core\obj\Debug\net6.0\ref\Movies.Aplication.dll

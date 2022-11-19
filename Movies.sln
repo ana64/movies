@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Domain", "Movies.Domain\Movies.Domain.csproj", "{93724364-F6DF-4EE9-BE7A-8940CCE5DDF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies.Domain", "Movies.Domain\Movies.Domain.csproj", "{93724364-F6DF-4EE9-BE7A-8940CCE5DDF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.DataAccess", "Movies.DataAccess\Movies.DataAccess.csproj", "{9312AAB5-0B21-432A-9D7C-4808B8684ADE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies.DataAccess", "Movies.DataAccess\Movies.DataAccess.csproj", "{9312AAB5-0B21-432A-9D7C-4808B8684ADE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Core", "Movies.Core\Movies.Core.csproj", "{09E34D9B-41B8-4CD0-8D9A-D5DC1CE48D96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies.Aplication", "Movies.Core\Movies.Aplication.csproj", "{09E34D9B-41B8-4CD0-8D9A-D5DC1CE48D96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.WebApi", "Movies.WebApi\Movies.WebApi.csproj", "{35580978-42C8-4AB8-9929-F73DA6070A1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies.WebApi", "Movies.WebApi\Movies.WebApi.csproj", "{35580978-42C8-4AB8-9929-F73DA6070A1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Infrastructure", "Movies.Infrastructure\Movies.Infrastructure.csproj", "{D83A540D-248F-4653-BBA6-64C4D91F0699}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Movies.Implementation", "Movies.Infrastructure\Movies.Implementation.csproj", "{D83A540D-248F-4653-BBA6-64C4D91F0699}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

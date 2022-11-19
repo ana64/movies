@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hczgxXNhsUt04r1g+4uUubemC/6YdGWwFyeNGc+lVDwXlg5iX3Y+N3FF0Z7IeYZUEWgC82cJ6AS/J3a86ttgoQ==",
+  "dgSpecHash": "vQ2I4vJROudA97GAGVnx5DXUfsnveBgiPcBvJHg9DeVrFHEQcrdFsTrsx1GyJyE1y4BJxvRWn/EV4vl8yMBIJQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ana\\source\\repos\\Movies\\Movies.WebApi\\Movies.WebApi.csproj",
+  "projectFilePath": "C:\\Users\\Ana\\source\\repos\\Movies\\git\\Movies.WebApi\\Movies.WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ana\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Ana\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

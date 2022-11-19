@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1md68tAb/OizuGWTNGCPYWJh9A4gorVuJplQGkfidwq2FyYekvgdRRhMkhQlbL14ojsv2O66VqJ2j+1e2Wngcg==",
+  "dgSpecHash": "dlV9SMdCjCWp/nYHg43kUNzYnzSr5FVMIfmOcXb7wzhDe3FnJsM0xwZqtnlpgHPcLuhIVbyVOuWOq+TgU9DQVA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ana\\source\\repos\\Movies\\Movies.Core\\Movies.Core.csproj",
+  "projectFilePath": "C:\\Users\\Ana\\source\\repos\\Movies\\git\\Movies.Core\\Movies.Aplication.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

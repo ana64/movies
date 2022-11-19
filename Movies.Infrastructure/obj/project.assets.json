@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ana\\source\\repos\\Movies\\Movies.Infrastructure\\Movies.Infrastructure.csproj",
-      "projectName": "Movies.Infrastructure",
-      "projectPath": "C:\\Users\\Ana\\source\\repos\\Movies\\Movies.Infrastructure\\Movies.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Ana\\source\\repos\\Movies\\git\\Movies.Infrastructure\\Movies.Implementation.csproj",
+      "projectName": "Movies.Implementation",
+      "projectPath": "C:\\Users\\Ana\\source\\repos\\Movies\\git\\Movies.Infrastructure\\Movies.Implementation.csproj",
       "packagesPath": "C:\\Users\\Ana\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ana\\source\\repos\\Movies\\Movies.Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\Ana\\source\\repos\\Movies\\git\\Movies.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
