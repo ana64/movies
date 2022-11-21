@@ -1,22 +1,20 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Movies.Domain;
 using Movies.Domain.Entities;
+using System;
 
 namespace Movies.DataAccess
 {
     public class AppDbContext : DbContext
     {
-        public AppDbContext()
-        {
-
-        }
+       
         public AppDbContext(DbContextOptions options)  : base(options)    {  }
 
         public User User { get; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(@"Data Source =.\SQLEXPRESS; Initial Catalog = Movies; Integrated Security = True");
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer(@"Data Source =.\SQLEXPRESS; Initial Catalog = Movies; Integrated Security = True");
+        //}
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(this.GetType().Assembly);

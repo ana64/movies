@@ -1,0 +1,15 @@
+C:\Users\Ana\source\repos\movie\Movies.Application\obj\Debug\net5.0\Movies.Application.csproj.AssemblyReference.cache
+C:\Users\Ana\source\repos\movie\Movies.Application\obj\Debug\net5.0\Movies.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ana\source\repos\movie\Movies.Application\obj\Debug\net5.0\Movies.Application.AssemblyInfoInputs.cache
+C:\Users\Ana\source\repos\movie\Movies.Application\obj\Debug\net5.0\Movies.Application.AssemblyInfo.cs
+C:\Users\Ana\source\repos\movie\Movies.Application\obj\Debug\net5.0\Movies.Application.csproj.CoreCompileInputs.cache
+C:\Users\Ana\source\repos\movie\Movies.Application\bin\Debug\net5.0\Movies.Application.deps.json
+C:\Users\Ana\source\repos\movie\Movies.Application\bin\Debug\net5.0\Movies.Application.dll
+C:\Users\Ana\source\repos\movie\Movies.Application\bin\Debug\net5.0\Movies.Application.pdb
+C:\Users\Ana\source\repos\movie\Movies.Application\bin\Debug\net5.0\Movies.Domain.dll
+C:\Users\Ana\source\repos\movie\Movies.Application\bin\Debug\net5.0\Movies.Domain.pdb
+C:\Users\Ana\source\repos\movie\Movies.Application\obj\Debug\net5.0\Movies.Application.csproj.CopyComplete
+C:\Users\Ana\source\repos\movie\Movies.Application\obj\Debug\net5.0\Movies.Application.dll
+C:\Users\Ana\source\repos\movie\Movies.Application\obj\Debug\net5.0\refint\Movies.Application.dll
+C:\Users\Ana\source\repos\movie\Movies.Application\obj\Debug\net5.0\Movies.Application.pdb
+C:\Users\Ana\source\repos\movie\Movies.Application\obj\Debug\net5.0\ref\Movies.Application.dll
