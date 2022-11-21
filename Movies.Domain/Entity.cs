@@ -1,4 +1,6 @@
-﻿namespace Movies.Domain
+﻿using System;
+
+namespace Movies.Domain
 {
     public abstract class Entity
     {
