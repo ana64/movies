@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Movies.Application.Dto;
 using Movies.Application.interfeces;
 using Movies.Domain.Entities;
-
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -10,58 +8,58 @@ namespace Movies.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class GenresController : ControllerBase
+    public class JobController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
-        public GenresController(IUnitOfWork unitOfWork)
+
+        public JobController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
-        // GET: api/<GenresController>
+
+        // GET: api/<JobController>
         [HttpGet]
         public IActionResult Get()
         {
-            var genres = _unitOfWork.Genres.ReadAll();
-            return Ok(genres);
+            var jobs = _unitOfWork.Jobs.ReadAll();
+            return Ok(jobs);
         }
 
-        // GET api/<GenresController>/5
+        // GET api/<JobController>/5
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            var genre = _unitOfWork.Genres.ReadById(id);
-
-            if(genre == null)
-                return NotFound();
-
-            return Ok(genre);
+            var jobs = _unitOfWork.Jobs.ReadById(id);
+            return Ok(jobs);
         }
 
-        // POST api/<GenresController>
+        // POST api/<JobController>
         [HttpPost]
-        public IActionResult Post([FromBody] Genre genre)
+        public IActionResult Post([FromBody] Job job)
         {
-            _unitOfWork.Genres.Create(genre);
+            _unitOfWork.Jobs.Create(job);
             _unitOfWork.Save();
 
             return StatusCode(201);
         }
 
-        // PUT api/<GenresController>/5
+        // PUT api/<JobController>/5
         [HttpPut("{id}")]
-        public IActionResult Put( [FromBody] Genre genre)
+        public IActionResult Put([FromBody] Job job)
         {
-            _unitOfWork.Genres.Update(genre);
+            _unitOfWork.Jobs.Update(job);
             _unitOfWork.Save();
+
             return NoContent();
         }
 
-        // DELETE api/<GenresController>/5
+        // DELETE api/<JobController>/5
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            _unitOfWork.Genres.Delete(id);
+            _unitOfWork.Jobs.Delete(id);
             _unitOfWork.Save();
+
             return NoContent();
         }
     }

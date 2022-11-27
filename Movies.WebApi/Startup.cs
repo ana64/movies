@@ -37,6 +37,7 @@ namespace Movies.WebApi
             #region Repositories
             services.AddTransient(typeof(IRepository<>), typeof(BaseRepository<>));
             services.AddTransient<IGenreRepository, GenreRepository>();
+            services.AddTransient<IJobRepository, JobRepository>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             #endregion
 

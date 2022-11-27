@@ -9,6 +9,7 @@ namespace Movies.Application.interfeces
     public interface IUnitOfWork : IDisposable
     {
         IGenreRepository Genres { get; }
+        IJobRepository Jobs { get; }
 
         int Save();
     }

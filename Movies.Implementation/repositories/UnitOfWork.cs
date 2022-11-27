@@ -16,9 +16,12 @@ namespace Movies.Implementation.repositories
         {
             _context = context;
             Genres = new GenreRepository(_context);
+            Jobs = new JobRepository(_context);
         }
 
         public IGenreRepository Genres { get; private set; }
+
+        public IJobRepository Jobs { get; private set; }
 
         public void Dispose()
         {

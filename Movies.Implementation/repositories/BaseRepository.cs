@@ -23,8 +23,9 @@ namespace Movies.Implementation.repositories
             _context.Set<T>().Add(entity);
         }
 
-       public  void Delete(T entity)
+       public  void Delete(int id)
         {
+            var entity = ReadById(id);
             _context.Set<T>().Remove(entity);
         }
 
@@ -33,7 +34,7 @@ namespace Movies.Implementation.repositories
             return _context.Set<T>().ToList();
         }
 
-        public T ReadById(long id)
+        public T ReadById(int id)
         {
             return _context.Set<T>().Find(id);
         }

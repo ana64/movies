@@ -9,9 +9,9 @@ namespace Movies.Application.interfeces
     public interface IRepository <T>
     {
         IEnumerable<T> ReadAll();
-        T ReadById(long id);
+        T ReadById(int id);
         void Create(T entity);
         void Update(T entity);
-        void Delete(T entity);
+        void Delete(int id);
     }
 }
