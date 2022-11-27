@@ -15,13 +15,20 @@ namespace Movies.Implementation.repositories
         public UnitOfWork(AppDbContext context)
         {
             _context = context;
+
             Genres = new GenreRepository(_context);
             Jobs = new JobRepository(_context);
+            Actors = new ActorRepository(_context);
+            Staffs = new StaffRepository(_context);
         }
 
         public IGenreRepository Genres { get; private set; }
 
         public IJobRepository Jobs { get; private set; }
+
+        public IStaffRepository Staffs { get; private set; }
+
+        public IActorRepository Actors { get; private set; }
 
         public void Dispose()
         {

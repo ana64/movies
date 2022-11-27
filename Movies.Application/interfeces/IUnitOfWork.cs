@@ -10,6 +10,9 @@ namespace Movies.Application.interfeces
     {
         IGenreRepository Genres { get; }
         IJobRepository Jobs { get; }
+        IStaffRepository Staffs { get; }
+        IActorRepository Actors { get; }
+        IMovieRepository Movies { get; }
 
         int Save();
     }

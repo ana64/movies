@@ -38,6 +38,9 @@ namespace Movies.WebApi
             services.AddTransient(typeof(IRepository<>), typeof(BaseRepository<>));
             services.AddTransient<IGenreRepository, GenreRepository>();
             services.AddTransient<IJobRepository, JobRepository>();
+            services.AddTransient<IStaffRepository, StaffRepository>();
+            services.AddTransient<IActorRepository, ActorRepository>();
+            services.AddTransient<IMovieRepository, MovieRepository>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             #endregion
 
