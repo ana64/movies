@@ -9,5 +9,6 @@ namespace Movies.Application.interfeces
 {
     public interface IMovieRepository : IRepository<Movie>
     {
+       
     }
 }

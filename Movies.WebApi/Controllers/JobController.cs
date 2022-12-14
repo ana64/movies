@@ -1,6 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using FluentValidation;
+using Microsoft.AspNetCore.Mvc;
+using Movies.Application.Dto;
 using Movies.Application.interfeces;
 using Movies.Domain.Entities;
+using Movies.Implementation.validators;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -11,10 +15,12 @@ namespace Movies.WebApi.Controllers
     public class JobController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
 
-        public JobController(IUnitOfWork unitOfWork)
+        public JobController(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
 
         // GET: api/<JobController>
@@ -35,8 +41,11 @@ namespace Movies.WebApi.Controllers
 
         // POST api/<JobController>
         [HttpPost]
-        public IActionResult Post([FromBody] Job job)
+        public IActionResult Post([FromBody] JobDto j, [FromServices] JobValidator validator)
         {
+            validator.ValidateAndThrow(j);
+            var job = _mapper.Map<Job>(j);
+
             _unitOfWork.Jobs.Create(job);
             _unitOfWork.Save();
 
@@ -44,9 +53,10 @@ namespace Movies.WebApi.Controllers
         }
 
         // PUT api/<JobController>/5
-        [HttpPut("{id}")]
-        public IActionResult Put([FromBody] Job job)
+        [HttpPut]
+        public IActionResult Put([FromBody] JobDto j)
         {
+            var job = _mapper.Map<Job>(j);
             _unitOfWork.Jobs.Update(job);
             _unitOfWork.Save();
 

@@ -1,6 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using FluentValidation;
+using Microsoft.AspNetCore.Mvc;
+using Movies.Application.Dto;
 using Movies.Application.interfeces;
 using Movies.Domain.Entities;
+using Movies.Implementation.validators;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -11,10 +15,12 @@ namespace Movies.WebApi.Controllers
     public class ActorController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
 
-        public ActorController(IUnitOfWork unitOfWork)
+        public ActorController(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
 
         // GET: api/<ActorController>
@@ -35,8 +41,11 @@ namespace Movies.WebApi.Controllers
 
         // POST api/<ActorController>
         [HttpPost]
-        public IActionResult Post([FromBody] Actor actor)
+        public IActionResult Post([FromBody] ActorDto a, [FromServices] ActorValidator validator)
         {
+            validator.ValidateAndThrow(a);
+            var actor = _mapper.Map<Actor>(a);
+
             _unitOfWork.Actors.Create(actor);
             _unitOfWork.Save();
 
@@ -44,9 +53,11 @@ namespace Movies.WebApi.Controllers
         }
 
         // PUT api/<ActorController>/5
-        [HttpPut("{id}")]
-        public IActionResult Put( [FromBody] Actor actor)
+        [HttpPut]
+        public IActionResult Put( [FromBody] ActorDto a)
         {
+            var actor = _mapper.Map<Actor>(a);
+
             _unitOfWork.Actors.Update(actor);
             _unitOfWork.Save();
 

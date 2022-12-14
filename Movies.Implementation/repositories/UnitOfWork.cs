@@ -20,6 +20,8 @@ namespace Movies.Implementation.repositories
             Jobs = new JobRepository(_context);
             Actors = new ActorRepository(_context);
             Staffs = new StaffRepository(_context);
+            Movies = new MovieRepository(_context);
+            Reviews = new ReviewRepository(_context);
         }
 
         public IGenreRepository Genres { get; private set; }
@@ -29,6 +31,10 @@ namespace Movies.Implementation.repositories
         public IStaffRepository Staffs { get; private set; }
 
         public IActorRepository Actors { get; private set; }
+
+        public IMovieRepository Movies { get; private set; }
+
+        public IReviewRepository Reviews { get; private set; }
 
         public void Dispose()
         {

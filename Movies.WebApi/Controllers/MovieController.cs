@@ -1,6 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using FluentValidation;
+using Microsoft.AspNetCore.Mvc;
+using Movies.Application.Dto;
 using Movies.Application.interfeces;
 using Movies.Domain.Entities;
+using Movies.Implementation.validators;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -11,10 +15,13 @@ namespace Movies.WebApi.Controllers
     public class MovieController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
 
-        public MovieController(IUnitOfWork unitOfWork)
+
+        public MovieController(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
 
         // GET: api/<MovieController>
@@ -39,8 +46,11 @@ namespace Movies.WebApi.Controllers
 
         // POST api/<MovieController>
         [HttpPost]
-        public IActionResult Post([FromBody] Movie movie)
+        public IActionResult Post([FromBody] MovieDto m, [FromServices] MovieValidator validator)
         {
+            validator.ValidateAndThrow(m);
+            var movie = _mapper.Map<Movie>(m);
+
             _unitOfWork.Movies.Create(movie);
             _unitOfWork.Save();
 
@@ -48,8 +58,10 @@ namespace Movies.WebApi.Controllers
         }
 
         // PUT api/<MovieController>
-        public IActionResult Put( [FromBody] Movie movie)
+        [HttpPut]
+        public IActionResult Put( [FromBody] MovieDto m)
         {
+            var movie = _mapper.Map<Movie>(m);
             _unitOfWork.Movies.Update(movie);
             _unitOfWork.Save();
 

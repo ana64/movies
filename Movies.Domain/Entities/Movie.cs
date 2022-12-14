@@ -8,9 +8,9 @@ namespace Movies.Domain.Entities
 {
     public class Movie : Entity
     {
-        public string Title { get; set; }
+        public string? Title { get; set; }
         public DateTime ReleaseDate { get; set; }
-        public int Time { get; set; } 
+        public int Time { get; set; }  // in minutes
         public string? Poster { get; set; }
 
 

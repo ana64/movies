@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using FluentValidation;
+using Microsoft.AspNetCore.Mvc;
 using Movies.Application.Dto;
 using Movies.Application.interfeces;
 using Movies.Domain.Entities;
+using Movies.Implementation.validators;
 
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -13,9 +16,11 @@ namespace Movies.WebApi.Controllers
     public class GenresController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
-        public GenresController(IUnitOfWork unitOfWork)
+        private readonly IMapper _mapper;
+        public GenresController(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
         // GET: api/<GenresController>
         [HttpGet]
@@ -39,8 +44,11 @@ namespace Movies.WebApi.Controllers
 
         // POST api/<GenresController>
         [HttpPost]
-        public IActionResult Post([FromBody] Genre genre)
+        public IActionResult Post([FromBody] GenreDto g, [FromServices] GenreValidator validator)
         {
+            validator.ValidateAndThrow(g);
+            var genre = _mapper.Map<Genre>(g);
+
             _unitOfWork.Genres.Create(genre);
             _unitOfWork.Save();
 
@@ -48,11 +56,14 @@ namespace Movies.WebApi.Controllers
         }
 
         // PUT api/<GenresController>/5
-        [HttpPut("{id}")]
-        public IActionResult Put( [FromBody] Genre genre)
+        [HttpPut]
+        public IActionResult Put( [FromBody] GenreDto g)
         {
+            var genre = _mapper.Map<Genre>(g);
+
             _unitOfWork.Genres.Update(genre);
             _unitOfWork.Save();
+
             return NoContent();
         }
 
@@ -62,6 +73,7 @@ namespace Movies.WebApi.Controllers
         {
             _unitOfWork.Genres.Delete(id);
             _unitOfWork.Save();
+
             return NoContent();
         }
     }

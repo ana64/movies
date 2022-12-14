@@ -9,10 +9,11 @@ namespace Movies.Application.interfeces
     public interface IUnitOfWork : IDisposable
     {
         IGenreRepository Genres { get; }
-        IJobRepository Jobs { get; }
         IStaffRepository Staffs { get; }
         IActorRepository Actors { get; }
         IMovieRepository Movies { get; }
+        IReviewRepository Reviews { get; }
+        IJobRepository Jobs { get; }
 
         int Save();
     }

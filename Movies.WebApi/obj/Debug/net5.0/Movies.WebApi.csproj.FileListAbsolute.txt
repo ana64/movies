@@ -65,3 +65,13 @@ C:\Users\Ana\source\repos\movie\Movies.WebApi\obj\Debug\net5.0\refint\Movies.Web
 C:\Users\Ana\source\repos\movie\Movies.WebApi\obj\Debug\net5.0\Movies.WebApi.pdb
 C:\Users\Ana\source\repos\movie\Movies.WebApi\obj\Debug\net5.0\Movies.WebApi.genruntimeconfig.cache
 C:\Users\Ana\source\repos\movie\Movies.WebApi\obj\Debug\net5.0\ref\Movies.WebApi.dll
+C:\Users\Ana\source\repos\movie\Movies.WebApi\obj\Debug\net5.0\Movies.WebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Ana\source\repos\movie\Movies.WebApi\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\Ana\source\repos\movie\Movies.WebApi\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Ana\source\repos\movie\Movies.WebApi\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\Ana\source\repos\movie\Movies.WebApi\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Ana\source\repos\movie\Movies.WebApi\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+C:\Users\Ana\source\repos\movie\Movies.WebApi\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Ana\source\repos\movie\Movies.WebApi\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Ana\source\repos\movie\Movies.WebApi\bin\Debug\net5.0\Movies.WebApi.xml
+C:\Users\Ana\source\repos\movie\Movies.WebApi\obj\Debug\net5.0\Movies.WebApi.xml
